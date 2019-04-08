@@ -9,11 +9,16 @@ module Compare
     def initialize source_file_path, target_file_path
       @source_file_path = source_file_path
       @target_file_path = target_file_path
-      @source = File.open(source_file_path)
-      @target = File.open(target_file_path)
     end
 
     def process
+      unless (validate_source && validate_target)
+        puts 'Exiting...'
+        return
+      end
+      
+      @source = File.open(source_file_path) if validate_source
+      @target = File.open(target_file_path) if validate_target
       compare
     end
 
@@ -58,6 +63,22 @@ module Compare
         else
           puts "Nothing missing from #{file}."
         end
+      end
+
+      def validate_source
+        validate_file(source_file_path, 'source')
+      end
+
+      def validate_target
+        validate_file(target_file_path, 'target')
+      end
+
+      def validate_file file, file_type
+        if file.nil? || file.empty?
+          puts "We need a #{file_type} file to work with."
+          false
+        end
+        true
       end
 
   end
