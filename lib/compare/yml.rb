@@ -76,7 +76,7 @@ module Compare
       def validate_file file, file_type
         if file.nil? || file.empty?
           puts "We need a #{file_type} file to work with."
-          false
+          return false
         end
         true
       end
