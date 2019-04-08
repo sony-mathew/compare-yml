@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "compare/yml"
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+# require "pry"
+# Pry.start
+
+# require "irb"
+# IRB.start(__FILE__)
+
+source_file_path = ARGV[0]
+target_file_path = ARGV[1]
+
+compare = Compare::YML.new(source_file_path, target_file_path)
+compare.process
