@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Sony Mathew']
   spec.email         = ['sony.mathew.pm@gmail.com']
 
-  spec.summary       = %q{Compare two yml files to find out teh differences in keys fo both.}
-  spec.description   = %q{Compare two yml files to find out teh differences in keys fo both.}
+  spec.summary       = %q{Compare two yml files to find out the differences in keys of both.}
+  spec.description   = %q{In case of I18n files or other configuration files which could be usually in yml or json format, you might need to compare the keys of two files and understand the differences. This gem is for those occasions especillay when you are working with translation files.}
   spec.homepage      = "https://sony-mathew.github.io/compare-yml.html"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    # spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata['homepage_uri'] = spec.homepage
     spec.metadata['source_code_uri'] = "https://github.com/sony-mathew/compare-yml"
