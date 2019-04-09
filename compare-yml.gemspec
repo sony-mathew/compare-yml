@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['sony.mathew.pm@gmail.com']
 
   spec.summary       = %q{Compare two yml files to find out the differences in keys of both.}
-  spec.description   = %q{In case of I18n files or other configuration files which could be usually in yml or json format, you might need to compare the keys of two files and understand the differences. This gem is for those occasions especillay when you are working with translation files.}
+  spec.description   = %q{In case of I18n files or other configuration files which could be usually in yml or json format, you might need to compare the keys of two files and find out the missing ones. This gem is for those occasions, especially when you are working with translation files. This can work with both json and yml files.}
   spec.homepage      = "https://sony-mathew.github.io/compare-yml.html"
   spec.license       = "MIT"
 

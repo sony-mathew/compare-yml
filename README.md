@@ -1,8 +1,6 @@
 # Compare::YML
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/compare/yml`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This library can be used to compare two yml or json files to understand the differences in keys of both files. This library supports comparison of deeply nested keys also.
 
 ## Installation
 
@@ -22,7 +20,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The usage of this gem is pretty simple. You don't need to have this in your gemfile to use this. An executable is already included.
+
+So after doing `gem install compare-yml`, you can directly type in 
+
+```
+compare_yml source_file target_file
+```
+in your terminal/command-prompt.
+
+This library is designed to work with comparing both yaml and json files. An example usage in a rails translation situation would be: 
+
+```
+compare_yml config/locales/en.yml config/locales/de.yml
+```
+
+This will show you the keys which are missing from `en.yml` compared to `de.yml` and vice versa. The comparision is two way meaning, we will compare `en.yml` keys with respect to `de.yml` keys and also compare `de.yml` keys with respect to `en.yml`.
+
+An example usage for people using translation in react app would be :
+
+```
+compare_yml public/static/locales/fr.json public/static/locales/en.json
+```
+
+You can use this for comparing translation files, as well as for any yml or json files for that matter. Do not get fooled by the examples.
 
 ## Development
 
